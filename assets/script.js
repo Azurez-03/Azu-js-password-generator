@@ -14,3 +14,9 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+//Characters for the pasword
+var upChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var loChars = "abcdefghigklmnopqrstuvwxyz";
+var numChars = "0123456789";
+var simChars = "~!@#$%^&*?";
