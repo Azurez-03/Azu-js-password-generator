@@ -25,11 +25,13 @@ var simChars = "~!@#$%^&*?";
 function generatePassword() {
   var actualPassword = "";
 
-  alert("the following promts are criteria for generating password.");
+  alert("The following promts are criteria for generating password.");
+
   //pw length
-  var pwdLenght = prompt("Chose the lenght of pasword (Between 8 and 128 charachters).");
+  var pwdLength = prompt("Chose the lenght of pasword. Between 8 and 128 charachters.");
   if (pwdLength != null) {
-    if (pwdLenght >= 8 && pwdLenght <= 128) {
+    if (pwdLength >= 8 && pwdLength <= 128) {
+
       alert("One of the following must be a choise lowercase, upercase, numeric, and/or special character must be confirmed.");
 
       var chooser = false;
@@ -46,28 +48,32 @@ function generatePassword() {
         chooser = true;
         charChoices += loChars;
       }
-      var numCase = confirm("Do you want numeric charachters?");
-      if (numCase === true) {
+      var numChoice = confirm("Do you want numeric charachters?");
+      if (numChoice === true) {
         chooser = true;
         charChoices += numChars;
       }
 
-      var simCase = confirm("Do you want special charachters?");
-      if (simCase === true) {
+      var simChoice = confirm("Do you want special charachters?");
+      if (simChoice === true) {
         chooser = true;
         charChoices += simChars;
       }
 
-      if (chosser === false) {
+      if (chooser === false) {
         alert("You must choose at least one of lowercase, uppercase, numeric, and /or special character type.");
       } else {
-        for (i =1; i< pwdLength; i++){
+
+        for (i =1; i< pwdLength; i++ ){
           actualPassword += charChoices[Math.floor(Math.random()*charChoices.length)];
         };
       };
-      }
-    }
-  }
 
-
-};
+    } else {
+      alert("Chose a number between 8and 128")
+      
+    };
+   
+  };
+  return actualPassword;
+}
