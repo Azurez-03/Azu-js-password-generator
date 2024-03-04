@@ -37,13 +37,13 @@ function generatePassword() {
       var chooser = false;
       var charChoices = "";
 
-      var upCase = confirm("Do you wnat uper case charachters?");
+      var upCase = confirm("Do you wnat upercase charachters?");
       if (upCase === true) {
         chooser = true;
         charChoices += upChars;
       }
 
-      var loCase = confirm("Do you want lower case charachters?");
+      var loCase = confirm("Do you want lowercase charachters?");
       if (loCase === true) {
         chooser = true;
         charChoices += loChars;
@@ -70,7 +70,7 @@ function generatePassword() {
       };
 
     } else {
-      alert("Chose a number between 8and 128")
+      alert("Number must be between 8 and 128 characters")
       
     };
    
