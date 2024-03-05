@@ -71,6 +71,7 @@ function generatePassword() {
 
     } else {
       alert("Number must be between 8 and 128 characters")
+      return;
       
     };
    
