@@ -35,29 +35,29 @@ function generatePassword() {
       alert("One of the following must be a choise lowercase, upercase, numeric, and/or special character must be confirmed.");
 
       var chooser = false;
-      var charChoices = "";
+      var chaChoices = "";
 
       var upCase = confirm("Do you wnat upercase charachters?");
       if (upCase === true) {
         chooser = true;
-        charChoices += upChars;
+        chaChoices += upChars;
       }
 
       var loCase = confirm("Do you want lowercase charachters?");
       if (loCase === true) {
         chooser = true;
-        charChoices += loChars;
+        chaChoices += loChars;
       }
       var numChoice = confirm("Do you want numeric charachters?");
       if (numChoice === true) {
         chooser = true;
-        charChoices += numChars;
+        chaChoices += numChars;
       }
 
       var simChoice = confirm("Do you want special charachters?");
       if (simChoice === true) {
         chooser = true;
-        charChoices += simChars;
+        chaChoices += simChars;
       }
 
       if (chooser === false) {
@@ -65,7 +65,7 @@ function generatePassword() {
       } else {
 
         for (i =1; i< pwdLength; i++ ){
-          actualPassword += charChoices[Math.floor(Math.random()*charChoices.length)];
+          actualPassword += chaChoices[Math.floor(Math.random()*chaChoices.length)];
         };
       };
 
